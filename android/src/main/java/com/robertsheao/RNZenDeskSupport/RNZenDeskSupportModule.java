@@ -90,7 +90,7 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
       .withArticleVoting(articleVotingEnabled)
       .withContactUsButtonVisibility(withContactUsButtonVisibility)
       .showConversationsMenuButton(showConversationsMenuButton)
-      .show(getReactApplicationContext());
+      .show(getCurrentActivity());
   }
 
   @ReactMethod
@@ -125,7 +125,7 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
       .withContactUsButtonVisibility(withContactUsButtonVisibility)
       .showConversationsMenuButton(showConversationsMenuButton)
       .withArticlesForCategoryIds(toLongArray(categoryIds.toArrayList()))
-      .show(getReactApplicationContext());
+      .show(getCurrentActivity());
   }
 
   @ReactMethod
@@ -159,7 +159,7 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
       .withArticleVoting(articleVotingEnabled)
       .withContactUsButtonVisibility(withContactUsButtonVisibility)
       .showConversationsMenuButton(showConversationsMenuButton)
-      .show(getReactApplicationContext());
+      .show(getCurrentActivity());
   }
 
   @ReactMethod
@@ -195,7 +195,7 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
       .withContactUsButtonVisibility(withContactUsButtonVisibility)
       .showConversationsMenuButton(showConversationsMenuButton)
       .withLabelNames(labels.toArrayList().toArray(new String[]{}))
-      .show(getReactApplicationContext());
+      .show(getCurrentActivity());
   }
 
   @ReactMethod
@@ -228,12 +228,12 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
 
     ZendeskConfig.INSTANCE.setCustomFields(fields);
 
-    ContactZendeskActivity.startActivity(getReactApplicationContext(), null);
+    ContactZendeskActivity.startActivity(getCurrentActivity(), null);
   }
 
   @ReactMethod
   public void supportHistory() {
-    RequestActivity.startActivity(getReactApplicationContext(), null);
+    RequestActivity.startActivity(getCurrentActivity(), null);
   }
 
 }
