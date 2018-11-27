@@ -46,7 +46,7 @@ public class RNZenDeskSupportModule extends ReactContextBaseJavaModule {
     String appId = config.getString("appId");
     String zendeskUrl = config.getString("zendeskUrl");
     String clientId = config.getString("clientId");
-    ZendeskConfig.INSTANCE.init(getReactApplicationContext(), zendeskUrl, appId, clientId);
+    ZendeskConfig.INSTANCE.init(getCurrentActivity(), zendeskUrl, appId, clientId);
   }
 
   @ReactMethod
